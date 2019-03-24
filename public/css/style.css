@@ -1,0 +1,686 @@
+.background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: url(../img/LoginBG.jpg) no-repeat;
+    background-color: #fff;
+    background-size: 100%;
+    opacity: 0.6;
+}
+
+.background .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: orange;
+    zoom: 1;
+    filter: alpha(opacity=80);
+    opacity: 0.3;
+}
+
+.panel.login{
+  position: relative;
+  z-index: 3;
+  margin-top: 18%;
+}
+
+.xBox {
+	height : 200px;
+	position : relative;
+	background-color : black;
+	font-family : sans-serif;
+	font-size : 20px;
+	text-align : center;
+	color : #EDC03F;
+}
+
+.restaurant-list-img{
+	position : absolute;
+	left : 0px;
+	top : 0px;
+	opacity : 1;
+	transition : opacity 0.35s ;
+	width : 100%;
+	height : 100%;
+	padding: 10px;
+}
+
+.restaurant-list-img:hover {
+	opacity : 0.1;
+}
+
+a {
+	 color:#EDC03F;
+}
+
+input[type=button]{
+	margin-top: 20px;
+	background: orangered;
+  border-color: red;
+  padding : 12px 20px;
+  text-decoration: none;
+  color: white;
+  margin-right: 5px;
+  text-align: center;
+}
+
+input[type=submit]{
+  margin-top: 20px;
+  background: orangered;
+  border-color: red;
+  padding : 12px 20px;
+  text-decoration: none;
+  color: white;
+  margin-right: 5px;
+  text-align: center;
+}
+
+.container{
+	font-family: "Rockwell";
+}
+
+footer{
+  display: -webkit-box;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer p{
+  font-weight: bold;
+  margin: 12px;
+}
+
+.rate {
+  float: left;
+  height: 46px;
+}
+
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rate:not(:checked) > label:before { content: '★ '; }
+
+.rate > input:checked ~ label { color: #f9e819; }
+
+.rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label { color: #deb217; }
+
+.rate > input:checked + label:hover, .rate > input:checked + label:hover ~ label
+, .rate > input:checked ~ label:hover, .rate > input:checked ~ label:hover ~ label
+, .rate > label:hover ~ input:checked ~ label { color: #c59b08; }
+
+.rated{
+  color: #f9e819;
+}
+
+.rated-blank{
+  color: #ccc;
+}
+
+.menu{
+  margin: 30px 0;
+}
+
+.menu h5{
+  font-weight: bold;
+}
+
+.restaurantImg{
+  width: 300px;
+  height: 200px;
+}
+
+.restaurantImgBig{
+  width: 100%;
+  height: 280px;
+}
+
+.detailBoxHeader{
+  background-color: #fcb44c;
+}
+
+.detailBoxHeader ul li a{
+  color: black;
+}
+
+.detailBoxContent{
+  background-color: #f9c662;
+}
+
+#btnPost{
+  background-color: orangered;
+  border-color: red;
+  color: white;
+  padding: 5px 10px;
+}
+
+.reviewBox{
+  margin-bottom: 20px;
+}
+
+.reservationForm .formText{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.reservationForm textarea{
+  resize: none;
+  height: 50px;
+}
+
+
+  a.popup-link {
+    text-align: center;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    background-color: #FFBA00;
+    border-radius: 3px;
+    box-shadow: 0 5px 0px 0px #eea900;
+    display: block;
+  }
+  a.popup-link:hover {
+    background-color: #ff9900;
+    box-shadow: 0 3px 0px 0px #eea900;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+  }
+
+  #popup-table {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -200px;
+  }
+  #popup-table:target {
+    visibility:visible;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.8);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    z-index: 99999999999;
+    -webkit-transition:all 1s;
+    -moz-transition:all 1s;
+    transition:all 1s;
+  }
+  .popup-container {
+    position: relative;
+    margin: 2% auto;
+    padding: 50px;
+    background-color: #fafafa;
+    color:#333;
+    border-radius: 3px;
+    overflow-y: scroll;
+  }
+
+  a.popup-close {
+    position: absolute;
+    top:3px;
+    right:3px;
+    background-color: #333;
+    padding:7px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 1;
+    color:#fff;
+  }
+
+  .RestoTable{
+    display: block;
+    line-height: 100px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: 9px 0;
+  }
+
+  .RestoTable:hover, .RestoTable.active{
+    background-color: darkorange;
+  }
+
+  .title{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .banner-promo{
+    width: 100%;
+  }
+
+.navbar.fixed{
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  width: 100%;
+}
+
+input.btn-primary{
+  width: 100%;
+}
+
+thead{
+  background-color: orange;
+}
+
+@media (min-width: 420px){
+  .logo{
+    width: 150px;
+    margin-top: 6px;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    margin-left: 7%;
+  }
+
+  input.btn{
+    margin-top: 0px;
+    padding: 6px 12px;
+  }
+
+  .container{
+    min-height: 500px;
+    margin-top: 20%;
+  }
+
+  footer{
+    margin-top: 5vh;
+  }
+
+  .carousel {
+    width: 370px;
+    height: 185px;
+    margin: 0 3%;
+  }
+
+  .carousel-inner > .item {
+    width: 370px;
+    height: 185px;
+  }
+
+  .services-left-info h2,.wthree-about-info h3,.team-info h3{
+      font-size: 2em;
+  }
+
+  .nav-tabs > li > a{
+    font-size: 9px;
+  }
+
+  input[type=submit]{
+    font-size: 12px;
+  }
+
+  .img-restaurant{
+    width: 100%;
+    height: 300px;
+  }
+
+  .tab{
+    font-size: 15px;
+  }
+
+  iframe{
+    width: 100%;
+    height: 200px;
+  }
+
+  .menuImg{
+    width: 100%;
+    height: 120px;
+    margin: 10px 0;
+  }
+
+  .menuDesc{
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .username{
+    font-size: 12px;
+    margin: 10px 0;
+  }
+
+  .userPhoto{
+    margin-left: 5px;
+    height: 30px;
+  }
+
+  .reviewTitle{
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 12pt;
+  }
+
+  .review{
+    font-size: 10pt;
+  }
+
+  .rated{
+    font-size: 17px;
+  }
+
+  .rated-blank{
+    font-size: 17px;
+  }
+
+  a.popup-link {
+    width: 100%;
+    font-size: 10px;
+  }
+  
+  .popup-container {
+    width: 395px;
+    height: 95%;
+    margin-top: 3.333%;
+  }
+}
+
+@media (min-width: 768px){
+  .logo{
+    width: 120px;
+    margin-top: 6px;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    margin-left: 2%;
+  }
+
+  .navbar-form .form-control {
+    height: 28px;
+  }
+
+  input.btn{
+    margin-top: 0px;
+    padding: 2px 12px;
+    height: 28px;
+  }
+
+  .navbar-default .navbar-nav > li > a{
+    font-size: 12px;
+    margin-top: 3px;
+  }
+
+  .container{
+    min-height: 500px;
+    margin-top: 15%;
+  }
+
+  .carousel {
+    width: 500px;
+    height: 250px;
+    margin: 0 15%;
+  }
+
+  .carousel-inner > .item {
+    width: 500px;
+    height: 250px;
+  }
+
+  .services-left-info h2,.wthree-about-info h3,.team-info h3{
+      font-size: 2.5em;
+  }
+
+  .nav-tabs > li > a{
+    font-size: 12px;
+  }
+
+  input[type=submit]{
+    font-size: 14px;
+  }
+
+  .img-restaurant{
+    width: 210px;
+    height: 200px;
+  }
+
+  .tab{
+    font-size: 25px;
+  }
+
+  iframe{
+    height: 400px;
+  }
+
+  .menuImg{
+    height: 83px;
+  }
+
+  .menuDesc{
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .username{
+    font-size: 27px;
+  }
+
+  .userPhoto{
+    margin-left: 3px;
+    height: 90px;
+  }
+
+  .reviewTitle{
+    margin-top: 30px;
+    font-size: 18pt;
+  }
+
+  .review{
+    font-size: 12pt;
+  }
+
+  .rated{
+    font-size: 25px;
+  }
+
+  .rated-blank{
+    font-size: 25px;
+  }
+
+  a.popup-link {
+    font-size: 15px;
+  }
+  
+  .popup-container {
+    width: 630px;
+    height: 93%;
+    margin-top: 2.5%;
+  }
+}
+
+@media (min-width: 992px){
+  .logo{
+    width: 150px;
+    margin-top: 6px;
+  }
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    margin-left: 5%;
+  }
+
+  .navbar-form .form-control {
+    height: 30px;
+    width: 250px;
+  }
+
+  input.btn{
+    height: 30px;
+  }
+
+  .navbar-default .navbar-nav > li > a{
+    font-size: 15px;
+  }
+
+  .container{
+    min-height: 500px;
+    margin-top: 12%;
+  }
+
+  footer{
+    margin-top: 23vh;
+  }
+
+  .carousel {
+    width: 800px;
+    height: 400px;
+    margin: 0 8%;
+  }
+
+  .carousel-inner > .item {
+    width: 800px;
+    height: 400px;
+  }
+
+  .nav-tabs > li > a{
+    font-size: 15px;
+  }
+
+  input[type=submit]{
+    font-size: 18px;
+  }
+
+  .img-restaurant{
+    width: 350px;
+    height: 300px;
+  }
+
+  .tab{
+    font-size: 30px;
+  }
+
+  iframe{
+    height: 530px;
+  }
+
+  .menuImg{
+    height: 100px;
+  }
+
+  .menuDesc{
+    font-size: 20px;
+  }
+
+  .reviewTitle{
+    font-size: 20pt;
+  }
+
+  .review{
+    font-size: 15pt;
+  }
+
+  .rated{
+    font-size: 30px;
+  }
+
+  .rated-blank{
+    font-size: 30px;
+  }
+
+  a.popup-link {
+    font-size: 17px;
+  }
+  
+  .popup-container {
+    width: 670px;
+    height: 87%;
+    margin-top: 5%;
+  }
+}
+
+@media (min-width: 1200px){
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form{
+    margin-left: 7%;
+  }
+
+  .navbar-form .form-control {
+    height: 33px;
+    width: 380px;
+  }
+
+  input.btn{
+    padding: 0px 12px;
+    height: 33px;
+  }
+
+  .navbar-default .navbar-nav > li > a, .nav-tabs > li > a{
+    font-size: 18px;
+  }
+
+  .container{
+    min-height: 500px;
+    margin-top: 9%;
+  }
+
+  footer{
+    margin-top: 33vh;
+  }
+
+  .carousel {
+    width: 800px;
+    height: 400px;
+    margin: 0 15%;
+  }
+
+  .carousel-inner > .item {
+    width: 800px;
+    height: 400px;
+  }
+
+  input[type=submit]{
+    font-size: 22px;
+  }
+
+  iframe{
+    height: 580px;
+  }
+
+  .menuImg{
+    height: 130px;
+  }
+
+  .reviewTitle{
+    font-size: 25pt;
+  }
+
+  .review{
+    font-size: 18pt;
+  }
+
+  .rated{
+    font-size: 37px;
+  }
+
+  .rated-blank{
+    font-size: 37px;
+  }
+  
+  .popup-container {
+    width: 700px;
+    height: 83%;
+    margin-top: 5%;
+  }
+}
